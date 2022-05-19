@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "detection",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bazel-bin/mediapipe/examples/desktop/face_detection/face_detection_cpu",
+            "args": [
+                "--calculator_graph_config_file",
+                "mediapipe/graphs/face_detection/face_detection_desktop_live.pbtxt"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "build",
+        },
+    ]
+}

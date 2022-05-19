@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "bazel",
+            "args" :[
+                "build",
+                "--define",
+                "MEDIAPIPE_DISABLE_GPU=1",
+                "--compilation_mode=dbg",
+                "--cxxopt=\"-std=c++17\"",
+                "--sandbox_debug",
+                "mediapipe/examples/desktop/face_detection:face_detection_cpu"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
