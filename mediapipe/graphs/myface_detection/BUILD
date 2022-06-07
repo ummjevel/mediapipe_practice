@@ -11,8 +11,7 @@ cc_library(
     name = "desktop_calculators",
     deps = [
         "//mediapipe/calculators/core:flow_limiter_calculator",
-        "//mediapipe/calculators/util:annotation_overlay_calculator",
-        "//mediapipe/calculators/util:detections_to_render_data_calculator",
-        "//mediapipe/modules/face_detection:face_detection_short_range_image",
+        "//mediapipe/modules/face_detection:face_detection_short_range_cpu",
+        "//mediapipe/modules/face_recognition:face_recognition_short_range_cpu",
     ],
 )
