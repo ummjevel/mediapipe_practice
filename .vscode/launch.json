@@ -17,5 +17,23 @@
             "MIMode": "gdb",
             "preLaunchTask": "build",
         },
+        {
+            "name": "detection_from_image",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bazel-bin/mediapipe/examples/desktop/face_detection_image/face_detection_cpu_image",
+            "args": [
+                "--calculator_graph_config_file",
+                "mediapipe/graphs/face_detection/face_detection_desktop_live.pbtxt",
+                "--input_image_path", "${workspaceFolder}/images/detection/bts_640_640.jpg",
+                "--output_image_path", "${workspaceFolder}/images_result/bts_640_640_result.jpg"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "face_detection_image_build",
+        }
     ]
 }

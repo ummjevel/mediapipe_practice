@@ -18,6 +18,24 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "face_detection_image_build",
+            "type": "shell",
+            "command": "bazel",
+            "args" :[
+                "build",
+                "--define",
+                "MEDIAPIPE_DISABLE_GPU=1",
+                "--compilation_mode=dbg",
+                "--cxxopt=\"-std=c++17\"",
+                "--sandbox_debug",
+                "mediapipe/examples/desktop/face_detection_image:face_detection_cpu_image"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
